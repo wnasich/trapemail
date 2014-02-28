@@ -22,4 +22,4 @@ $email = new TrapEmail($config);
 after ```$email->send()``` you will get an email in trap@domain.com with original recipients in the header as below:
 * X-intended-to
 * X-intended-cc
-* intended-bcc
+* X-intended-bcc
