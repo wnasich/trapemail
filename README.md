@@ -3,6 +3,11 @@ trapemail
 
 Extend Network/Email/CakeEmail allowing override original recipients
 
+Install
+-------
+
+Copy content of Lib folder into your app/Lib.
+
 Usage
 -----
 Whenever you need to send email, ensure this class is loaded:
