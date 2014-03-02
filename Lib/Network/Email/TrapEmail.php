@@ -25,6 +25,7 @@ class TrapEmail extends CakeEmail {
 	 *
 	 * @param string|array $content String with message or array with messages
 	 * @return array
+	 * @throws InvalidArgumentException
 	 */
 	public function send($content = null) {
 		if ($this->realRecipients) {
@@ -41,6 +42,8 @@ class TrapEmail extends CakeEmail {
 			if ($originalBCC) {
 				$this->addHeaders(array('X-intended-bcc' => join(', ', $originalBCC)));
 			}
+		} else {
+			throw new InvalidArgumentException(__('Must set a real recipients'));
 		}
 
 		return parent::send($content);
