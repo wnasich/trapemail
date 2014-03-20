@@ -38,9 +38,11 @@ class TrapEmail extends CakeEmail {
 			}
 			if ($originalCC) {
 				$this->addHeaders(array('X-intended-cc' => join(', ', $originalCC)));
+				$this->cc(array());
 			}
 			if ($originalBCC) {
 				$this->addHeaders(array('X-intended-bcc' => join(', ', $originalBCC)));
+				$this->bcc(array());
 			}
 		} else {
 			throw new InvalidArgumentException(__('Must set a real recipients'));
