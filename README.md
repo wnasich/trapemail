@@ -1,7 +1,9 @@
 trapemail
 =========
 
-Extend Network/Email/CakeEmail allowing override original recipients
+Extend Network/Email/CakeEmail allowing override original recipients.
+
+See https://github.com/wnasich/TrapSmtp to use a better approach.
 
 Install
 -------
